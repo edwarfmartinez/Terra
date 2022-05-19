@@ -77,7 +77,6 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="satelliteImagery:" destination="9gh-lE-cu7" eventType="touchUpInside" id="6kv-Ke-Kqu"/>
-                                                    <segue destination="aCH-BR-rio" kind="show" id="FgF-Rd-9le"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJr-l8-6qD">
@@ -115,6 +114,7 @@
                     <navigationItem key="navigationItem" id="eFR-Yf-dP1"/>
                     <connections>
                         <outlet property="mapView" destination="Diq-cP-pV0" id="byE-Xk-hEq"/>
+                        <segue destination="aCH-BR-rio" kind="show" identifier="goToSatelliteImage" id="LUx-EC-Tzx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngc-Td-vYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,24 +146,63 @@
         <!--View Controller-->
         <scene sceneID="wL4-v5-PHv">
             <objects>
-                <viewController id="aCH-BR-rio" sceneMemberID="viewController">
+                <viewController id="aCH-BR-rio" customClass="ViewController" customModule="Terra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BEV-Vy-PdU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dl2-uU-QNe">
-                                <rect key="frame" x="62" y="394" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eew-jA-DXi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5hM-Zd-A0d">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="625"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bfk-U0-Kf5">
+                                        <rect key="frame" x="0.0" y="625" width="414" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yt-IJ-cCs">
+                                                <rect key="frame" x="0.0" y="40" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o72-5R-smg">
+                                                <rect key="frame" x="138" y="40" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ht-mf-PmG">
+                                                <rect key="frame" x="276" y="40" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="5Pb-sX-pnF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vO6-SB-tZY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eew-jA-DXi" firstAttribute="leading" secondItem="vO6-SB-tZY" secondAttribute="leading" id="BB3-uS-Gpz"/>
+                            <constraint firstItem="eew-jA-DXi" firstAttribute="bottom" secondItem="vO6-SB-tZY" secondAttribute="bottom" id="Z0r-2R-DEg"/>
+                            <constraint firstItem="eew-jA-DXi" firstAttribute="trailing" secondItem="vO6-SB-tZY" secondAttribute="trailing" id="fkT-nL-fq3"/>
+                            <constraint firstItem="eew-jA-DXi" firstAttribute="top" secondItem="vO6-SB-tZY" secondAttribute="top" id="pVe-HA-bxK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O4l-Fm-ZBX"/>
+                    <connections>
+                        <outlet property="imageView" destination="5hM-Zd-A0d" id="uR1-Xc-7Me"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pT2-pb-OPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="-601"/>
+            <point key="canvasLocation" x="1692.753623188406" y="-601.33928571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5js-Xf-fxp">
@@ -184,7 +223,6 @@
     </scenes>
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
