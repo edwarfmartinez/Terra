@@ -10,8 +10,10 @@ import MapKit
 
 class FieldDetailController: UIViewController {
     var terraManager = TerraManager()
-    var fieldsModel = FieldsModel()
     var fieldDetailModel = FieldDetailModel()
+    var forecastModel = ForecastModel()
+    var soilModel = SoilModel()
+    
     let locationManager = CLLocationManager()
     var places = [Place]()
     var coordinates = [[[Double]]]()
@@ -20,35 +22,24 @@ class FieldDetailController: UIViewController {
     var center = [Double]()
     var area = Double()
     
-    
-    
     @IBOutlet weak var mapView: MKMapView!
     
-    
-    @IBAction func satelliteImagery(_ sender: UIButton) {
-        
-        
-        performSegue(withIdentifier: "goToSatelliteImage", sender: self)
-    }
-        
     override func viewDidLoad() {
         
         super.viewDidLoad()
         terraManager.delegateImages = self
+        terraManager.delegateForecast = self
+        terraManager.delegateSoil = self
+        
+        mapView.layer.cornerRadius = K.cornerRadius
         requestLocationAccess()
         addAnnotations()
-        
         terraManager.getSecrets()
+        
         terraManager.fetchFieldDetail(polygonId: polygonId)
+        terraManager.fetchForecast(lat: center.last!, lon: center.first!)
+        terraManager.fetchSoil(polygonId: polygonId)
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     func requestLocationAccess() {
         let status = CLLocationManager.authorizationStatus()
@@ -58,7 +49,7 @@ class FieldDetailController: UIViewController {
             return
             
         case .denied, .restricted:
-            print("location access denied")
+            print(K.Mapkit.locationAccessErrorMessage)
             
         default:
             locationManager.requestWhenInUseAuthorization()
@@ -67,13 +58,14 @@ class FieldDetailController: UIViewController {
     
     func addAnnotations() {
         
-
+        
         let title = name
         let latitude = center.last! as Double, longitude = center.first! as Double
-        let subtitle = "Lat: \(latitude)\nLon: \(longitude)\nArea (hecs): \(area)"
+        let subtitle = K.Mapkit.annotationLatLabel + String(latitude) + K.Mapkit.annotationLonLabel + String(longitude) + K.Mapkit.annotationAreaLabel + String(area)
+        
         let place = Place(title: title, subtitle: subtitle, coordinate: CLLocationCoordinate2DMake(latitude, longitude))
         places.append(place)
-       
+        
         
         mapView?.delegate = self
         mapView?.addAnnotations(places)
@@ -81,12 +73,9 @@ class FieldDetailController: UIViewController {
         var fieldCoords = [CLLocationCoordinate2D]()
         for coord in coordinates.first! {
             
-            //fieldCoords.append(CLLocationCoordinate2D(latitude: 1.1, longitude: 22.2))
             fieldCoords.append(CLLocationCoordinate2D(latitude: coord.last!, longitude: coord.first!))
-            //fieldCoords.append(CLLocationCoordinate2D(latitude: 22.2, longitude:1.1))
-            //print(fieldCoords)
+            
         }
-        //print(fieldCoords)
         let fieldOverlay = MKPolyline(coordinates: fieldCoords, count: fieldCoords.count)
         mapView.addOverlay(fieldOverlay)
         
@@ -99,32 +88,67 @@ class FieldDetailController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destinationVC = segue.destination as! ViewController
-        print(fieldDetailModel.mdlImage ?? "")
-        destinationVC.url = fieldDetailModel.mdlImage ?? ""
+        switch segue.identifier
+        {
+        case K.Segues.satSegue:
+            let destinationVC = segue.destination as! SatelliteController
+            destinationVC.url = fieldDetailModel.mdlUrl ?? ""
+            destinationVC.cl = fieldDetailModel.mdlCl ?? 0
+            destinationVC.dc = fieldDetailModel.mdlDc  ?? 0
+            destinationVC.azimuth = fieldDetailModel.mdlAzimuth ?? 0
+            destinationVC.elevation = fieldDetailModel.mdlElevation ?? 0
             
+        case K.Segues.forecastSegue:
+            let destinationVC = segue.destination as! ForecastController
+            destinationVC.pointsTemp = forecastModel.mdlTempPoints!
+            destinationVC.pointsClouds = forecastModel.mdlCloudsPoints!
+            
+        default:
+            let destinationVC = segue.destination as! SoilController
+            destinationVC.soilModel = soilModel
         }
+        
     }
+}
 
+//MARK: - MKMapViewDelegate
 
 extension FieldDetailController : MKMapViewDelegate{
-    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        
-        if let polyline = overlay as? MKPolyline {
-            let lineRenderer = MKPolylineRenderer(polyline: polyline)
+        if let polyLine = overlay as? MKPolyline {
+            let lineRenderer = MKPolylineRenderer(polyline: polyLine)
             lineRenderer.strokeColor = K.Mapkit.lineColor
             lineRenderer.lineWidth = K.Mapkit.lineWidth
             return lineRenderer
-            
         }
-        fatalError("MKMapView rendererFor error: \(Error.self)")
+        fatalError(K.ErrorMessages.drawPolygonErrorMessage + "\(Error.self)")
     }
 }
 
+//MARK: - SatelliteImagesDelegate
 extension FieldDetailController : SatelliteImagesDelegate{
     func didUpdateFieldDetail(_ terraManager: TerraManager, fields: FieldDetailModel) {
-        fieldDetailModel = fields
-        
+        DispatchQueue.main.async{
+            self.fieldDetailModel = fields
+        }
     }
 }
+
+//MARK: - ForecastDelegate
+extension FieldDetailController : ForecastDelegate{
+    func didUpdateForecast(_ terraManager: TerraManager, fields: ForecastModel) {
+        DispatchQueue.main.async {
+            self.forecastModel = fields
+        }
+    }
+}
+
+//MARK: - SoilDelegate
+extension FieldDetailController : SoilDelegate{
+    func didUpdateSoil(_ terraManager: TerraManager, fields: SoilModel) {
+        DispatchQueue.main.async {
+            self.soilModel = fields
+        }
+    }
+}
+

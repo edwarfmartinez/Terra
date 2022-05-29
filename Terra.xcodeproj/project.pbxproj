@@ -3,17 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0A045D283756E500D63520 /* ForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A045C283756E500D63520 /* ForecastController.swift */; };
+		4E0A04612837575B00D63520 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A04602837575B00D63520 /* ForecastData.swift */; };
+		4E0A04642837577900D63520 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A04632837577900D63520 /* ForecastModel.swift */; };
 		4E42F2A928330A3800B0D15B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42F2A828330A3800B0D15B /* Constants.swift */; };
-		4E4BDBF5282975AB00A236C9 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4BDBF4282975AB00A236C9 /* Places.swift */; };
 		4E544D88283475C900F3E955 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E544D87283475C900F3E955 /* Secrets.plist */; };
 		4E544D8C2834A6EE00F3E955 /* FieldDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E544D8B2834A6EE00F3E955 /* FieldDetailData.swift */; };
+		4E58C715283DB3130011DE4A /* SoilData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58C714283DB3130011DE4A /* SoilData.swift */; };
+		4E58C718283DB4BD0011DE4A /* SoilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58C717283DB4BD0011DE4A /* SoilController.swift */; };
+		4E58C71B283DB7050011DE4A /* SoilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58C71A283DB7050011DE4A /* SoilModel.swift */; };
 		4EC8D47C28204290005D1C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47B28204290005D1C60 /* AppDelegate.swift */; };
 		4EC8D47E28204290005D1C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47D28204290005D1C60 /* SceneDelegate.swift */; };
-		4EC8D48028204290005D1C60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47F28204290005D1C60 /* ViewController.swift */; };
+		4EC8D48028204290005D1C60 /* SatelliteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47F28204290005D1C60 /* SatelliteController.swift */; };
 		4EC8D48328204290005D1C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC8D48128204290005D1C60 /* Main.storyboard */; };
 		4EC8D48528204295005D1C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC8D48428204295005D1C60 /* Assets.xcassets */; };
 		4EC8D48828204295005D1C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC8D48628204295005D1C60 /* LaunchScreen.storyboard */; };
@@ -23,17 +28,25 @@
 		4EC8D4A628208E35005D1C60 /* FieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D4A528208E35005D1C60 /* FieldsModel.swift */; };
 		4EC8D4AD282090C5005D1C60 /* FieldsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D4AC282090C5005D1C60 /* FieldsData.swift */; };
 		4ECAB13E2825D1A300E7022A /* FieldDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAB13D2825D1A300E7022A /* FieldDetailModel.swift */; };
+		4EDFBFAF28385E88008A7939 /* ChartDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFBFAE28385E88008A7939 /* ChartDefaults.swift */; };
+		F15C8A6EB9C76D34BA4959C7 /* Pods_Terra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFFC925A17339DF793E4064 /* Pods_Terra.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BFFC925A17339DF793E4064 /* Pods_Terra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Terra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0A045C283756E500D63520 /* ForecastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastController.swift; sourceTree = "<group>"; };
+		4E0A04602837575B00D63520 /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
+		4E0A04632837577900D63520 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		4E42F2A828330A3800B0D15B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4E4BDBF4282975AB00A236C9 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		4E544D87283475C900F3E955 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Secrets.plist; path = ../../../../Desktop/Secrets.plist; sourceTree = "<group>"; };
 		4E544D8B2834A6EE00F3E955 /* FieldDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldDetailData.swift; sourceTree = "<group>"; };
+		4E58C714283DB3130011DE4A /* SoilData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoilData.swift; sourceTree = "<group>"; };
+		4E58C717283DB4BD0011DE4A /* SoilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoilController.swift; sourceTree = "<group>"; };
+		4E58C71A283DB7050011DE4A /* SoilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoilModel.swift; sourceTree = "<group>"; };
 		4EC8D47828204290005D1C60 /* Terra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC8D47B28204290005D1C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC8D47D28204290005D1C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EC8D47F28204290005D1C60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EC8D47F28204290005D1C60 /* SatelliteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteController.swift; sourceTree = "<group>"; };
 		4EC8D48228204290005D1C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EC8D48428204295005D1C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC8D48728204295005D1C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +57,9 @@
 		4EC8D4A528208E35005D1C60 /* FieldsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsModel.swift; sourceTree = "<group>"; };
 		4EC8D4AC282090C5005D1C60 /* FieldsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsData.swift; sourceTree = "<group>"; };
 		4ECAB13D2825D1A300E7022A /* FieldDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldDetailModel.swift; sourceTree = "<group>"; };
+		4EDFBFAE28385E88008A7939 /* ChartDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDefaults.swift; sourceTree = "<group>"; };
+		5CBE43B18B71D682340D6C6A /* Pods-Terra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terra.release.xcconfig"; path = "Target Support Files/Pods-Terra/Pods-Terra.release.xcconfig"; sourceTree = "<group>"; };
+		A7D526F699A9C9C51ACE73DD /* Pods-Terra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terra.debug.xcconfig"; path = "Target Support Files/Pods-Terra/Pods-Terra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15C8A6EB9C76D34BA4959C7 /* Pods_Terra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +79,8 @@
 			children = (
 				4EC8D47A28204290005D1C60 /* Terra */,
 				4EC8D47928204290005D1C60 /* Products */,
+				863DC0DAEDF452961C9FBABB /* Pods */,
+				F65ABF7308F929C935639976 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,12 +95,13 @@
 		4EC8D47A28204290005D1C60 /* Terra */ = {
 			isa = PBXGroup;
 			children = (
-				4E42F2A828330A3800B0D15B /* Constants.swift */,
 				4EC8D49A28207D82005D1C60 /* Model */,
 				4EC8D4A02820815D005D1C60 /* View */,
 				4EC8D494282057AB005D1C60 /* Controller */,
 				4EC8D47B28204290005D1C60 /* AppDelegate.swift */,
 				4EC8D47D28204290005D1C60 /* SceneDelegate.swift */,
+				4EDFBFAE28385E88008A7939 /* ChartDefaults.swift */,
+				4E42F2A828330A3800B0D15B /* Constants.swift */,
 				4EC8D48428204295005D1C60 /* Assets.xcassets */,
 				4EC8D48628204295005D1C60 /* LaunchScreen.storyboard */,
 				4E544D87283475C900F3E955 /* Secrets.plist */,
@@ -93,9 +113,11 @@
 		4EC8D494282057AB005D1C60 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4EC8D47F28204290005D1C60 /* ViewController.swift */,
+				4EC8D47F28204290005D1C60 /* SatelliteController.swift */,
 				4EC8D491282057A3005D1C60 /* FieldDetailController.swift */,
 				4EC8D49728205992005D1C60 /* FieldsViewController.swift */,
+				4E0A045C283756E500D63520 /* ForecastController.swift */,
+				4E58C717283DB4BD0011DE4A /* SoilController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -108,7 +130,10 @@
 				4EC8D4AC282090C5005D1C60 /* FieldsData.swift */,
 				4ECAB13D2825D1A300E7022A /* FieldDetailModel.swift */,
 				4E544D8B2834A6EE00F3E955 /* FieldDetailData.swift */,
-				4E4BDBF4282975AB00A236C9 /* Places.swift */,
+				4E0A04632837577900D63520 /* ForecastModel.swift */,
+				4E0A04602837575B00D63520 /* ForecastData.swift */,
+				4E58C714283DB3130011DE4A /* SoilData.swift */,
+				4E58C71A283DB7050011DE4A /* SoilModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +146,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		863DC0DAEDF452961C9FBABB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7D526F699A9C9C51ACE73DD /* Pods-Terra.debug.xcconfig */,
+				5CBE43B18B71D682340D6C6A /* Pods-Terra.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F65ABF7308F929C935639976 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BFFC925A17339DF793E4064 /* Pods_Terra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EC8D48C28204295005D1C60 /* Build configuration list for PBXNativeTarget "Terra" */;
 			buildPhases = (
+				97F8F582B153F945000A5727 /* [CP] Check Pods Manifest.lock */,
 				4EC8D47428204290005D1C60 /* Sources */,
 				4EC8D47528204290005D1C60 /* Frameworks */,
 				4EC8D47628204290005D1C60 /* Resources */,
+				2CDAD78641A4251F0F39B69E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,22 +231,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CDAD78641A4251F0F39B69E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Terra/Pods-Terra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Terra/Pods-Terra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Terra/Pods-Terra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97F8F582B153F945000A5727 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Terra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EC8D47428204290005D1C60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E58C71B283DB7050011DE4A /* SoilModel.swift in Sources */,
+				4E58C718283DB4BD0011DE4A /* SoilController.swift in Sources */,
 				4EC8D492282057A3005D1C60 /* FieldDetailController.swift in Sources */,
 				4E42F2A928330A3800B0D15B /* Constants.swift in Sources */,
 				4EC8D49828205992005D1C60 /* FieldsViewController.swift in Sources */,
-				4EC8D48028204290005D1C60 /* ViewController.swift in Sources */,
+				4E0A045D283756E500D63520 /* ForecastController.swift in Sources */,
+				4EDFBFAF28385E88008A7939 /* ChartDefaults.swift in Sources */,
+				4E0A04612837575B00D63520 /* ForecastData.swift in Sources */,
+				4EC8D48028204290005D1C60 /* SatelliteController.swift in Sources */,
 				4EC8D49C28207DAD005D1C60 /* TerraManager.swift in Sources */,
 				4E544D8C2834A6EE00F3E955 /* FieldDetailData.swift in Sources */,
 				4ECAB13E2825D1A300E7022A /* FieldDetailModel.swift in Sources */,
-				4E4BDBF5282975AB00A236C9 /* Places.swift in Sources */,
+				4E58C715283DB3130011DE4A /* SoilData.swift in Sources */,
 				4EC8D4AD282090C5005D1C60 /* FieldsData.swift in Sources */,
 				4EC8D4A628208E35005D1C60 /* FieldsModel.swift in Sources */,
 				4EC8D47C28204290005D1C60 /* AppDelegate.swift in Sources */,
+				4E0A04642837577900D63520 /* ForecastModel.swift in Sources */,
 				4EC8D47E28204290005D1C60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +439,7 @@
 		};
 		4EC8D48D28204295005D1C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D526F699A9C9C51ACE73DD /* Pods-Terra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +459,7 @@
 		};
 		4EC8D48E28204295005D1C60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CBE43B18B71D682340D6C6A /* Pods-Terra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -5,10 +5,11 @@
 //  Created by EDWAR FERNANDO MARTINEZ CASTRO on 2/05/22.
 //
 
+import UIKit
 import Foundation
 
 // MARK: - Field
-struct FieldsData: Codable {
+struct FieldsData: Codable{
     let id: String
     let geoJSON: GeoJSON
     let name: String
@@ -16,15 +17,19 @@ struct FieldsData: Codable {
     let area: Double
     let userID: String
     let createdAt: Int
-
+    
+    
     enum CodingKeys: String, CodingKey {
+    
         case id
         case geoJSON = "geo_json"
         case name, center, area
         case userID = "user_id"
         case createdAt = "created_at"
     }
+    
 }
+
 
 // MARK: - GeoJSON
 struct GeoJSON: Codable {
@@ -43,4 +48,5 @@ struct Geometry: Codable {
 struct Properties: Codable {
 }
 
-typealias Fields = [FieldsData]
+typealias FieldData = [FieldsData]
+
