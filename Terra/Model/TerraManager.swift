@@ -31,6 +31,7 @@ struct TerraManager {
     var delegateImages : SatelliteImagesDelegate?
     var delegateForecast : ForecastDelegate?
     var delegateSoil : SoilDelegate?
+    //var fieldsModelT = FieldsModel()
     
     var apiKey : String?
     //MARK: - Get Secrets
@@ -156,7 +157,6 @@ struct TerraManager {
     
     func fetchGenericData<T: Decodable>(urlString: String, completion: @escaping (T) -> ()) {
         
-        print(urlString)
         let url = URL(string: urlString)
         URLSession.shared.dataTask(with: url!) { (data, resp, err) in
             if let err = err {

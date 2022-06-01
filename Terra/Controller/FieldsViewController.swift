@@ -52,9 +52,10 @@ class FieldsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: K.Segues.detailSegue, sender: self)
-        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row < fieldsModel.mdlName!.count {
+            performSegue(withIdentifier: K.Segues.detailSegue, sender: self)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
