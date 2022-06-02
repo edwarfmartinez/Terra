@@ -12,4 +12,4 @@ Concepts:
 * Swift guard keyword
 * Parse JSON with the native Encodable and Decodable protocols
 
-![HackerNews](https://user-images.githubusercontent.com/99278919/165993628-a9f1cb13-c084-47a4-9c6d-2916f54bb17c.gif)
+![Terra](https://user-images.githubusercontent.com/99278919/171554916-b37531d0-d3a9-47bc-9836-fe626c1dca62.gif)
