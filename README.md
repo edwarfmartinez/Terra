@@ -1,5 +1,5 @@
 # Terra
-iOS app for soil studying. Given a specific map location, this app shows vegetation index through satellite captures, clouds and weather forecast, soil moisture and temperature, between others. 
+iOS app for soil studying. Given a specific map location, this app shows vegetation index through satellite captures, clouds and weather forecasts, soil moisture and temperature, between others. 
 
 Concepts:
 
