@@ -33,7 +33,7 @@ class TerraTests: XCTestCase {
         terraManager.fetchFields()
         
         waitForExpectations(timeout: 10)
-        XCTAssertEqual(self.resultsFieldsModel.mdlName?.count, 5)
+        XCTAssertEqual(self.resultsFieldsModel.mdlName?.count, 10)
         
     }
     
@@ -44,8 +44,7 @@ class TerraTests: XCTestCase {
         
         terraManager.delegateImages = self
         terraManager.getSecrets()
-        terraManager.fetchFieldDetail(polygonId: "626f5bedc9dddc6d0d7f639c")
-        
+        terraManager.fetchFieldDetail(polygonId: "6297d3faf03cc7d28771da16")
         waitForExpectations(timeout: 10)
         XCTAssertNotNil(self.resultsFieldDetailModel.mdlUrl)
         

@@ -158,6 +158,7 @@ struct TerraManager {
     func fetchGenericData<T: Decodable>(urlString: String, completion: @escaping (T) -> ()) {
         
         let url = URL(string: urlString)
+        print(urlString)
         URLSession.shared.dataTask(with: url!) { (data, resp, err) in
             if let err = err {
                 print(K.ErrorMessages.fetchData, err)

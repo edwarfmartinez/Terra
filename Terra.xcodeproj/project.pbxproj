@@ -11,12 +11,11 @@
 		4E0A04612837575B00D63520 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A04602837575B00D63520 /* ForecastData.swift */; };
 		4E0A04642837577900D63520 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A04632837577900D63520 /* ForecastModel.swift */; };
 		4E42F2A928330A3800B0D15B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42F2A828330A3800B0D15B /* Constants.swift */; };
-		4E4C07552846021C00B60F10 /* TerraUITests1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C07542846021C00B60F10 /* TerraUITests1.swift */; };
-		4E544D88283475C900F3E955 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E544D87283475C900F3E955 /* Secrets.plist */; };
 		4E544D8C2834A6EE00F3E955 /* FieldDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E544D8B2834A6EE00F3E955 /* FieldDetailData.swift */; };
 		4E58C715283DB3130011DE4A /* SoilData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58C714283DB3130011DE4A /* SoilData.swift */; };
 		4E58C718283DB4BD0011DE4A /* SoilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58C717283DB4BD0011DE4A /* SoilController.swift */; };
 		4E58C71B283DB7050011DE4A /* SoilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58C71A283DB7050011DE4A /* SoilModel.swift */; };
+		4E923AE728A0A9E6002B7D2F /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E923AE628A0A9E6002B7D2F /* Secrets.plist */; };
 		4EC8D47C28204290005D1C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47B28204290005D1C60 /* AppDelegate.swift */; };
 		4EC8D47E28204290005D1C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47D28204290005D1C60 /* SceneDelegate.swift */; };
 		4EC8D48028204290005D1C60 /* SatelliteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8D47F28204290005D1C60 /* SatelliteController.swift */; };
@@ -66,13 +65,11 @@
 		4E0A04632837577900D63520 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		4E42F2A828330A3800B0D15B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E4C07522846021C00B60F10 /* TerraUITests1.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerraUITests1.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4C07542846021C00B60F10 /* TerraUITests1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerraUITests1.swift; sourceTree = "<group>"; };
-		4E4C07562846021C00B60F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E544D87283475C900F3E955 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Secrets.plist; path = ../../../../Desktop/Secrets.plist; sourceTree = "<group>"; };
 		4E544D8B2834A6EE00F3E955 /* FieldDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldDetailData.swift; sourceTree = "<group>"; };
 		4E58C714283DB3130011DE4A /* SoilData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoilData.swift; sourceTree = "<group>"; };
 		4E58C717283DB4BD0011DE4A /* SoilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoilController.swift; sourceTree = "<group>"; };
 		4E58C71A283DB7050011DE4A /* SoilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoilModel.swift; sourceTree = "<group>"; };
+		4E923AE628A0A9E6002B7D2F /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		4EC8D47828204290005D1C60 /* Terra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC8D47B28204290005D1C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC8D47D28204290005D1C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,22 +129,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E4C07532846021C00B60F10 /* TerraUITests1 */ = {
-			isa = PBXGroup;
-			children = (
-				4E4C07542846021C00B60F10 /* TerraUITests1.swift */,
-				4E4C07562846021C00B60F10 /* Info.plist */,
-			);
-			path = TerraUITests1;
-			sourceTree = "<group>";
-		};
 		4EC8D46F28204290005D1C60 = {
 			isa = PBXGroup;
 			children = (
 				4EC8D47A28204290005D1C60 /* Terra */,
 				4ECF71282845CC3F00B9AAD8 /* TerraTests */,
 				4ECF71392845CC6B00B9AAD8 /* TerraUITests */,
-				4E4C07532846021C00B60F10 /* TerraUITests1 */,
 				4EC8D47928204290005D1C60 /* Products */,
 				863DC0DAEDF452961C9FBABB /* Pods */,
 				F65ABF7308F929C935639976 /* Frameworks */,
@@ -177,7 +164,7 @@
 				4E42F2A828330A3800B0D15B /* Constants.swift */,
 				4EC8D48428204295005D1C60 /* Assets.xcassets */,
 				4EC8D48628204295005D1C60 /* LaunchScreen.storyboard */,
-				4E544D87283475C900F3E955 /* Secrets.plist */,
+				4E923AE628A0A9E6002B7D2F /* Secrets.plist */,
 				4EC8D48928204295005D1C60 /* Info.plist */,
 			);
 			path = Terra;
@@ -390,7 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E544D88283475C900F3E955 /* Secrets.plist in Resources */,
+				4E923AE728A0A9E6002B7D2F /* Secrets.plist in Resources */,
 				4EC8D48828204295005D1C60 /* LaunchScreen.storyboard in Resources */,
 				4EC8D48528204295005D1C60 /* Assets.xcassets in Resources */,
 				4EC8D48328204290005D1C60 /* Main.storyboard in Resources */,
@@ -460,7 +447,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4C07552846021C00B60F10 /* TerraUITests1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
