@@ -33,16 +33,20 @@ Select one of the fields from the list. It will be localized over the map, showi
 
 ### 3. NDVI
 
-Get the Normalized difference vegetation index (NDVI) for the selected field: A satellital image to recognize how fertile the filed is. Beside of this, the user gets information of the satellite that gaev the shot: Azimut, elevation, data coverage and cloud coverage:
+Get the Normalized difference vegetation index (NDVI) for the selected field: A satellite image to recognize how fertile the field is. Besides this, the user gets information about the satellite that captured the image: Azimut, elevation, data coverage, and cloud coverage:
 
 ![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/99278919/198192200-cd93f57d-b523-4dc7-9f07-3b095bbed7e0.gif)
 
 
 ### 4. Forecast
 
+This functionality predicts the temperature and cloud coverage for the selected field during the next week:
+
 ![ezgif com-gif-maker (12)](https://user-images.githubusercontent.com/99278919/198192614-b8ae56bc-63b4-436c-aab4-34eb108e209b.gif)
 
 
 ### 5. Soil
+
+Get the current soil temperature on the 10 centimeters depth, surface temperature, and soil moisture:
 
 ![ezgif com-gif-maker (13)](https://user-images.githubusercontent.com/99278919/198192831-c59ea2ad-6189-4abc-b27d-99c572ff7e99.gif)
